@@ -43,7 +43,9 @@ def index():
             result = "Percentage of being a GAY = 100%."
         elif key == "zhangmeihe":
             result = "Percentage of being a PRINCESS = 100%."
+        elif key == "wangzhihong":
+            result = "Percentage of being a CHAIRMAN = 100%."
         else:
-            n = key.count("h")  # 统计 'h'（不区分大小写用 key）
-            result = f"{n}%"
+            n = 6 * key.count("h")
+            result = f"Percentage of being a GAY ={n}%"
     return render_template_string(HTML, result=result, name=name)
